@@ -58,6 +58,8 @@ p{margin:0 0 1rem}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:1.25rem}
 .steps h3{font-size:1.3rem;margin-bottom:.4rem}
 figure.fig{margin:1.25rem 0 0}
+figure.hero{margin-top:2.5rem;max-width:760px}
+h3.sub{margin:2.25rem 0 .6rem;font-size:1.4rem}
 .ph{aspect-ratio:4/3;background:var(--surface);border:1.5px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--steel);font-size:.9rem;text-align:center;padding:1rem;overflow:hidden}
 .ph.auto{aspect-ratio:auto;padding:0;background:#fff}
 .ph.auto img{height:auto}
@@ -104,7 +106,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
     <li><span class="btn soon" title="Coming soon">3D models (coming soon)</span></li>
   </ul>
 
-  <figure class="fig" style="margin-top:2.5rem;max-width:760px"><div class="ph auto"><img src="static/figures/teaser.jpg" alt="Roller-jamming gripper prototype with two spherical membrane rollers, mounted on a white xArm7 robot arm" width="1400" height="1085" fetchpriority="high" decoding="async"></div><figcaption>Prototype of the proposed roller-jamming gripper mounted on a 7-DoF robot arm (xArm7).</figcaption></figure>
+  <figure class="fig hero"><div class="ph auto"><img src="static/figures/teaser.jpg" alt="Roller-jamming gripper prototype with two spherical membrane rollers, mounted on a white xArm7 robot arm" width="1400" height="1085" fetchpriority="high" decoding="async"></div><figcaption>Prototype of the proposed roller-jamming gripper mounted on a 7-DoF robot arm (xArm7).</figcaption></figure>
 
   <figure class="mechanism">
     <svg viewBox="0 0 680 230" role="img" aria-labelledby="mt md">
@@ -161,7 +163,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 <section id="method">
 <div class="wrap">
   <h2>How it works</h2>
-  <div class="steps prose" style="max-width:none">
+  <div class="steps">
     <div>
       <h3>Intake with rollers</h3>
       <p>When the first contact is off-centre or only partial, the rollers rotate inward and pull the object toward the centre of the gripper, increasing contact area.</p>
@@ -196,7 +198,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
   <figure class="fig"><div class="ph auto"><img src="static/figures/offset.jpg" alt="Eight panels, one per object, each showing a 3 by 3 grid of planar offsets with markers coloured by successes out of three; nearly all markers show three of three" width="2200" height="1023" loading="lazy" decoding="async"></div><figcaption>Planar-offset test results for the eight objects, with three trials per condition. Each coloured marker corresponds to one offset condition repeated three times; the marker colour indicates the number of successful trials out of three. Offsets are applied on a 3&nbsp;×&nbsp;3 grid about the estimated object centre and scaled to ±20% of the corresponding in-plane object extents.</figcaption></figure>
   <figure class="fig"><div class="ph auto"><img src="static/figures/orient.jpg" alt="Eight panels, one per object, each showing roll, pitch and yaw offset grids with cells labelled by successes out of three" width="2200" height="767" loading="lazy" decoding="async"></div><figcaption>Orientation-offset test results across the roll, pitch, and yaw conditions, with three trials per condition. Each cell represents one orientation-offset condition repeated three times, and the number and colour in each cell indicate the number of successful trials out of three. The 3&nbsp;×&nbsp;3&nbsp;×&nbsp;3 roll–pitch–yaw grid excludes the all-zero condition, shown in grey as not tested. For the paper sheet, the orientation-offset magnitude was reduced to ±5° to avoid gripper–table collision.</figcaption></figure>
 
-  <h3 style="margin:2.25rem 0 .6rem;font-size:1.4rem">Ablation</h3>
+  <h3 class="sub">Ablation</h3>
   <div class="prose"><p>Planar-offset trials on the pen, gallon jug and cable (81 trials per condition) show that rolling and jamming contribute differently.</p></div>
   <div class="tablewrap">
     <table>
