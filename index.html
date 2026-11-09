@@ -19,6 +19,7 @@
 <meta name="twitter:description" content="Roller intake plus granular jamming for grasping under pose uncertainty. IEEE Access, 2026.">
 <meta name="twitter:image" content="https://guillaumegourmelen.github.io/roller-jamming-gripper/static/figures/teaser.jpg">
 <meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%279%27 cy=%2720%27 r=%277%27 fill=%27none%27 stroke=%27%232447D6%27 stroke-width=%273%27/%3E%3Ccircle cx=%2723%27 cy=%2720%27 r=%277%27 fill=%27none%27 stroke=%27%232447D6%27 stroke-width=%273%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -45,7 +46,7 @@ h1{font-size:clamp(2rem,4.6vw,3.2rem);max-width:26ch;letter-spacing:-.01em}
 .btn.primary{background:var(--cobalt);color:var(--cobalt-ink)}
 .btn.soon{border-color:var(--line);color:var(--steel);border-style:dashed;cursor:default}
 .btn:not(.soon):hover{filter:brightness(1.1)}
-.mechanism{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;margin-top:2.5rem}
+.mechanism{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.5rem;margin:2.5rem 0 0}
 .mechanism svg{width:100%;height:auto;display:block}
 .mechanism figcaption,figure.fig figcaption{color:var(--steel);font-size:.92rem;margin-top:.75rem}
 section{padding:2.75rem 0;border-top:1px solid var(--line)}
@@ -66,7 +67,7 @@ figure.fig{margin:1.25rem 0 0}
 .stat b{display:block;font:600 2.4rem/1.1 Newsreader,Georgia,serif;color:var(--cobalt)}
 .stat span{color:var(--steel);font-size:.95rem}
 .tablewrap{overflow-x:auto;margin-top:1.25rem}
-table{border-collapse:collapse;width:100%;min-width:420px;background:var(--surface);border:1px solid var(--line)}
+table{border-collapse:collapse;width:100%;background:var(--surface);border:1px solid var(--line)}
 th,td{padding:.65rem .9rem;text-align:left;border-bottom:1px solid var(--line)}
 th{font-weight:600;background:var(--paper)}
 td.n{font-variant-numeric:tabular-nums}
@@ -75,6 +76,7 @@ caption{caption-side:top;text-align:left;color:var(--steel);font-size:.92rem;pad
 pre{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem;overflow-x:auto;font:.88rem/1.55 ui-monospace,Menlo,Consolas,monospace}
 .copy{position:absolute;top:.6rem;right:.6rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.3rem .7rem;font:600 .85rem "Public Sans",sans-serif;cursor:pointer}
 footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);font-size:.92rem}
+@media (max-width:480px){th,td{padding:.55rem .6rem}.mechanism{padding:1rem}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -124,9 +126,9 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
         <circle cx="482" cy="156" r="3"/><circle cx="495" cy="170" r="3"/><circle cx="507" cy="158" r="3"/><circle cx="486" cy="180" r="3"/><circle cx="504" cy="184" r="3"/><circle cx="496" cy="148" r="3"/>
         <circle cx="562" cy="156" r="3"/><circle cx="575" cy="170" r="3"/><circle cx="587" cy="158" r="3"/><circle cx="566" cy="180" r="3"/><circle cx="584" cy="184" r="3"/><circle cx="576" cy="148" r="3"/>
       </g>
-      <g font-family="Public Sans, sans-serif" font-size="15" style="fill:var(--ink)">
-        <text x="145" y="18" text-anchor="middle">1. Rollers draw the object in</text>
-        <text x="535" y="18" text-anchor="middle">2. Vacuum jams the grains</text>
+      <g font-family="Public Sans, sans-serif" font-size="20" style="fill:var(--ink)">
+        <text x="150" y="22" text-anchor="middle">1. Rollers draw the object in</text>
+        <text x="535" y="22" text-anchor="middle">2. Vacuum jams the grains</text>
       </g>
     </svg>
     <figcaption>The two stages of a grasp (schematic).</figcaption>
