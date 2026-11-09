@@ -52,18 +52,20 @@ h1{font-size:clamp(2rem,4.6vw,3.2rem);max-width:26ch;letter-spacing:-.01em}
 section{padding:2.75rem 0;border-top:1px solid var(--line)}
 section>.wrap>h2{font-size:1.9rem;margin-bottom:1.1rem}
 p{margin:0 0 1rem}
-.video{position:relative;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video{background:#000;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.25rem}
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:1.25rem}
 .steps h3{font-size:1.3rem;margin-bottom:.4rem}
 figure.fig{margin:1.25rem 0 0}
+video{display:block;width:100%;height:auto;background:#000}
+.tldr{font-size:1.15rem;max-width:62ch;margin:1.5rem 0 0}
+.limits{margin:0;padding-left:1.2rem}
+.limits li{margin-bottom:.5rem}
 figure.hero{margin-top:2.5rem;max-width:760px}
 h3.sub{margin:2.25rem 0 .6rem;font-size:1.4rem}
 .ph{aspect-ratio:4/3;background:var(--surface);border:1.5px dashed var(--line);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--steel);font-size:.9rem;text-align:center;padding:1rem;overflow:hidden}
 .ph.auto{aspect-ratio:auto;padding:0;background:#fff}
 .ph.auto img{height:auto}
-.video.soon{display:flex;align-items:center;justify-content:center;color:var(--steel)}
 .ph img{width:100%;height:100%;object-fit:contain;display:block}
 .stats{display:flex;flex-wrap:wrap;gap:2.5rem;margin:1.25rem 0 0}
 .stat b{display:block;font:600 2.4rem/1.1 Newsreader,Georgia,serif;color:var(--cobalt)}
@@ -98,6 +100,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 
   <ul class="links">
     <li><a class="btn primary" href="https://ieeexplore.ieee.org/document/11735371">Paper (IEEE Xplore)</a></li>
+    <li><a class="btn" href="https://arxiv.org/pdf/2608.20962">PDF</a></li>
     <li><a class="btn" href="https://arxiv.org/abs/2608.20962">arXiv</a></li>
     <li><a class="btn" href="https://doi.org/10.1109/ACCESS.2026.3738462">DOI</a></li>
     <li><a class="btn" href="#video">Video</a></li>
@@ -105,6 +108,8 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
     <li><span class="btn soon" title="Coming soon">Code (coming soon)</span></li>
     <li><span class="btn soon" title="Coming soon">3D models (coming soon)</span></li>
   </ul>
+
+  <p class="tldr"><strong>TL;DR</strong> The same spherical membrane rollers first rotate inward to draw an off-centre object into the grasp, then stiffen under vacuum (granular jamming) to hold it. 812 of 840 grasp trials succeeded under planar and orientation offsets.</p>
 
   <figure class="fig hero"><div class="ph auto"><img src="static/figures/teaser.jpg" srcset="static/figures/teaser-800.jpg 800w, static/figures/teaser.jpg 1400w" sizes="(max-width:808px) calc(100vw - 3rem), 760px" alt="Roller-jamming gripper prototype with two spherical membrane rollers, mounted on a white xArm7 robot arm" width="1400" height="1085" fetchpriority="high" decoding="async"></div><figcaption>Prototype of the proposed roller-jamming gripper mounted on a 7-DoF robot arm (xArm7).</figcaption></figure>
 
@@ -153,10 +158,10 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 <section id="video">
 <div class="wrap">
   <h2>Video</h2>
-  <div class="video">
-    <!-- TODO(video): replace YOUTUBE_VIDEO_ID with the id from your YouTube link (the part after v=). Until then the script below shows "Video coming soon". -->
-    <iframe src="https://www.youtube-nocookie.com/embed/YOUTUBE_VIDEO_ID" title="Hybrid roller-jamming gripper demo" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-  </div>
+  <figure class="fig">
+    <div class="video"><video controls muted playsinline preload="none" poster="static/videos/grasping-demo.jpg" width="1252" height="720" aria-label="Grasping demonstration video"><source src="static/videos/grasping-demo.mp4" type="video/mp4">Your browser cannot play this video. <a href="static/videos/grasping-demo.mp4">Download it (MP4)</a>.</video></div>
+    <figcaption>Gripper overview and grasps on the eight test objects (no sound; grasp clips at 3.5× speed).</figcaption>
+  </figure>
 </div>
 </section>
 
@@ -176,6 +181,40 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
   <div>
     <figure class="fig"><div class="ph auto"><img src="static/figures/assembly_1.jpg" alt="CAD renderings of the gripper: full assembly with two roller fingers, and the base module with palm, mounting adapter, XM430 motor and worm gears" width="1800" height="727" loading="lazy" decoding="async"></div><figcaption>Mechanical architecture of the proposed gripper: (Left) overall assembly and (Right) base module, showing the gripper palm, mounting adapter, XM430 actuator, and worm-gear finger-closing transmission.</figcaption></figure>
     <figure class="fig"><div class="ph auto"><img src="static/figures/assembly_2.jpg" alt="CAD renderings of one roller finger with its XL320 motor and worm gear, and an exploded view of the spherical membrane roller with clamp rings and rotary union" width="1800" height="634" loading="lazy" decoding="async"></div><figcaption>Roller-finger architecture: (Left) roller-finger module with the XL320-driven worm-gear transmission and (Right) spherical membrane roller construction, including the clamp rings, drive interface, and rotary union for vacuum feedthrough.</figcaption></figure>
+  </div>
+
+  <h3 class="sub">Spherical membrane rollers</h3>
+  <div class="prose">
+    <p>Each membrane is cast as a single spherical shell from Dragon Skin 30 silicone (nominal thickness 1&nbsp;mm, outer diameter about 80&nbsp;mm) in a 3D-printed two-part mould with an internal core. Dimples on the outer surface (3&nbsp;mm diameter, 0.6&nbsp;mm high) are intended to improve membrane flexibility.</p>
+    <p>The membrane is filled mainly with ground coffee plus about 50 polypropylene balls of 3&nbsp;mm and 5.5&nbsp;mm diameter, which reduces clumping and preserves airflow during evacuation. ABS clamp rings seal both ends; one end drives the roller and the other connects to a rotary union, so vacuum can be applied while the roller turns. Because the membrane is clamped rather than bonded, membrane and fill can be replaced in about 10 minutes. No membrane failures were observed during about 1000 grasp trials with the same membrane set.</p>
+  </div>
+  <div>
+    <figure class="fig"><div class="ph auto"><img src="static/figures/mould.jpg" alt="CAD renderings of the membrane mould: the green core shell with alignment shaft and clamping bands, and the opened grey two-part cavity with a dimpled spherical surface" width="1800" height="488" loading="lazy" decoding="async"></div><figcaption>Membrane mould components: (Left) internal core and alignment shaft and (Right) assembled two-part mould containing the core shell and outer cavity used to form the spherical dimpled membrane.</figcaption></figure>
+    <figure class="fig"><div class="video"><video controls muted playsinline preload="none" poster="static/videos/membrane-fabrication.jpg" width="854" height="480" aria-label="Membrane fabrication video"><source src="static/videos/membrane-fabrication.mp4" type="video/mp4">Your browser cannot play this video. <a href="static/videos/membrane-fabrication.mp4">Download it (MP4)</a>.</video></div><figcaption>Membrane fabrication (no sound): pouring silicone into the 3D-printed mould, degassing in a vacuum chamber, closing the mould, then demoulding and trimming the cured membrane.</figcaption></figure>
+  </div>
+
+  <h3 class="sub">Specifications</h3>
+  <div class="tablewrap">
+    <table>
+      <caption>Key mechanical specifications of the gripper.</caption>
+      <thead><tr><th scope="col">Item</th><th scope="col">Value</th></tr></thead>
+      <tbody>
+        <tr><td>Overall envelope (W × L × D)</td><td class="n">70 × 228 × 177&nbsp;mm</td></tr>
+        <tr><td>Total gripper mass</td><td class="n">1.31&nbsp;kg</td></tr>
+        <tr><td>Spherical membrane roller diameter</td><td class="n">≈ 80&nbsp;mm</td></tr>
+        <tr><td>Roller axial width</td><td class="n">73&nbsp;mm</td></tr>
+        <tr><td>Finger pivot to roller centre</td><td class="n">115.6&nbsp;mm</td></tr>
+        <tr><td>Max roller centre-to-centre distance</td><td class="n">285&nbsp;mm</td></tr>
+        <tr><td>Finger drive transmission</td><td class="n">Worm gear, 1:40</td></tr>
+        <tr><td>Roller drive transmission (each roller)</td><td class="n">Worm gear, 1:20</td></tr>
+        <tr><td>Actuated degrees of freedom</td><td class="n">3 (finger closing + one per roller)</td></tr>
+        <tr><td>Vacuum during jamming</td><td class="n">−0.082&nbsp;MPa</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sub">Bench tests and control</h3>
+  <div>
     <figure class="fig"><div class="ph auto"><img src="static/figures/force.jpg" alt="Force-versus-time plot of the three bench tests: roller traction, grasp slip-out resistance and clamping force, peaking at 8.4, 25.6 and 27.7 newtons" width="1800" height="572" loading="lazy" decoding="async"></div><figcaption>Preliminary bench force tests. Force time histories from the single roller-traction, grasp slip-out-resistance, and clamping-force trials. The maximum measured forces were 8.4, 25.6, and 27.7&nbsp;N, respectively.</figcaption></figure>
     <figure class="fig"><div class="ph auto"><img src="static/figures/fsm.jpg" alt="State diagram of the grasp controller: START, CLOSE, INTAKE, HOLD, JAM and RELEASE, with contact, timer and current-threshold transitions" width="1500" height="562" loading="lazy" decoding="async"></div><figcaption>Finite-state machine of the grasp controller. <code>CLOSE</code> and <code>HOLD</code> use motor-current and dwell conditions, whereas <code>INTAKE</code> and <code>JAM</code> use prescribed durations. Abort or manual-release commands return the system to <code>RELEASE</code>.</figcaption></figure>
   </div>
@@ -219,6 +258,22 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 <div class="wrap">
   <h2>Experimental setup</h2>
   <figure class="fig"><div class="ph auto"><img src="static/figures/setup.jpg" alt="Two overhead camera views of the tabletop with AprilTags at the corners. Bottom view: a T-shirt detected and outlined, with its centroid and extents overlaid" width="1400" height="929" loading="lazy" decoding="async"></div><figcaption>Experimental setup (top) and example of camera-based object localisation (bottom). For the T-shirt, pressure gauge, and cable, the overhead camera estimates the object centroid on the tabletop and in-plane extents after each manual reset. AprilTags define the tabletop reference frame used for localisation and offset generation.</figcaption></figure>
+  <figure class="fig"><div class="ph auto"><img src="static/figures/system.png" alt="Block diagram: the PC connects by USB to a U2D2 power hub driving two XL-320 motors and one XM430 motor, and to an Arduino that switches vacuum solenoid valves through a relay board; a vacuum pump feeds the valves" width="2019" height="1018" loading="lazy" decoding="async"></div><figcaption>Control, communication, electrical-power, and pneumatic architecture of the prototype gripper system.</figcaption></figure>
+</div>
+</section>
+
+<section id="limitations">
+<div class="wrap">
+  <h2>Limitations</h2>
+  <div class="prose">
+    <ul class="limits">
+      <li>Each offset condition was repeated three times on eight known objects. The results describe the tested conditions and should not be generalised to unseen objects.</li>
+      <li>All trials used a clear tabletop and a top-down approach, with no clutter, constrained approaches or external baseline gripper.</li>
+      <li>Intake duration, grasp height and clamping settings were calibrated per object. <code>INTAKE</code> and <code>JAM</code> run for fixed durations, and motor current cannot confirm contact with both rollers.</li>
+      <li>The prototype is relatively bulky and heavy, and a single actuator closes both fingers, so they cannot adapt independently to one-sided contact.</li>
+      <li>The geometric analysis is a nominal rigid-envelope reference, and the bench forces are single-trial, prototype-level measurements rather than rated values.</li>
+    </ul>
+  </div>
 </div>
 </section>
 
@@ -262,8 +317,6 @@ document.getElementById('copy').addEventListener('click', function () {
   });
   setTimeout(function () { b.textContent = 'Copy'; }, 2000);
 });
-var f=document.querySelector('.video iframe');
-if(f&&f.src.indexOf('YOUTUBE_VIDEO_ID')>-1){var v=f.parentNode;v.className+=' soon';v.textContent='Video coming soon';}
 </script>
 </body>
 </html>
