@@ -70,6 +70,7 @@ table{border-collapse:collapse;width:100%;min-width:420px;background:var(--surfa
 th,td{padding:.65rem .9rem;text-align:left;border-bottom:1px solid var(--line)}
 th{font-weight:600;background:var(--paper)}
 td.n{font-variant-numeric:tabular-nums}
+caption{caption-side:top;text-align:left;color:var(--steel);font-size:.92rem;padding:0 0 .5rem}
 .bib{position:relative}
 pre{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem;overflow-x:auto;font:.88rem/1.55 ui-monospace,Menlo,Consolas,monospace}
 .copy{position:absolute;top:.6rem;right:.6rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.3rem .7rem;font:600 .85rem "Public Sans",sans-serif;cursor:pointer}
@@ -107,21 +108,21 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
       <desc id="md">Left: two rollers draw an off-centre object inward. Right: the object sits at the centre and the rollers are stiffened by jamming.</desc>
       <g fill="none" stroke-width="2.5">
         <!-- stage 1: intake -->
-        <circle cx="105" cy="165" r="36" stroke="#5B6B7A"/><circle cx="185" cy="165" r="36" stroke="#5B6B7A"/>
-        <circle cx="190" cy="68" r="20" stroke="#2447D6"/>
-        <path d="M168 84 C 160 104, 152 118, 146 134" stroke="#2447D6" stroke-dasharray="5 5"/>
-        <path d="M146 134 l-1 -11 m1 11 l-10 -5" stroke="#2447D6"/>
-        <path d="M93 126 a40 40 0 0 1 24 0 m-6 -6 l6 6 l-8 3" stroke="#5B6B7A"/>
-        <path d="M197 126 a40 40 0 0 0 -24 0 m6 -6 l-6 6 l8 3" stroke="#5B6B7A"/>
+        <circle cx="105" cy="165" r="36" style="stroke:var(--steel)"/><circle cx="185" cy="165" r="36" style="stroke:var(--steel)"/>
+        <circle cx="190" cy="68" r="20" style="stroke:var(--cobalt)"/>
+        <path d="M168 84 C 160 104, 152 118, 146 134" style="stroke:var(--cobalt)" stroke-dasharray="5 5"/>
+        <path d="M146 134 l-1 -11 m1 11 l-10 -5" style="stroke:var(--cobalt)"/>
+        <path d="M93 126 a40 40 0 0 1 24 0 m-6 -6 l6 6 l-8 3" style="stroke:var(--steel)"/>
+        <path d="M197 126 a40 40 0 0 0 -24 0 m6 -6 l-6 6 l8 3" style="stroke:var(--steel)"/>
         <!-- stage 2: retention -->
-        <circle cx="495" cy="165" r="36" stroke="#5B6B7A"/><circle cx="575" cy="165" r="36" stroke="#5B6B7A"/>
-        <circle cx="535" cy="116" r="20" stroke="#2447D6"/>
+        <circle cx="495" cy="165" r="36" style="stroke:var(--steel)"/><circle cx="575" cy="165" r="36" style="stroke:var(--steel)"/>
+        <circle cx="535" cy="116" r="20" style="stroke:var(--cobalt)"/>
       </g>
-      <g fill="#5B6B7A">
+      <g style="fill:var(--steel)">
         <circle cx="482" cy="156" r="3"/><circle cx="495" cy="170" r="3"/><circle cx="507" cy="158" r="3"/><circle cx="486" cy="180" r="3"/><circle cx="504" cy="184" r="3"/><circle cx="496" cy="148" r="3"/>
         <circle cx="562" cy="156" r="3"/><circle cx="575" cy="170" r="3"/><circle cx="587" cy="158" r="3"/><circle cx="566" cy="180" r="3"/><circle cx="584" cy="184" r="3"/><circle cx="576" cy="148" r="3"/>
       </g>
-      <g fill="#1D2733" font-family="Public Sans, sans-serif" font-size="15" style="fill:var(--ink)">
+      <g font-family="Public Sans, sans-serif" font-size="15" style="fill:var(--ink)">
         <text x="145" y="18" text-anchor="middle">1. Rollers draw the object in</text>
         <text x="535" y="18" text-anchor="middle">2. Vacuum jams the grains</text>
       </g>
@@ -185,7 +186,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
     <div class="stat"><b>597/624</b><span>orientation-offset trials</span></div>
   </div>
 
-  <div class="tablewrap"><table><thead><tr><th>Object</th><th>Successful trials</th><th>Success rate</th></tr></thead><tbody><tr><td>Pen</td><td class="n">102/105</td><td class="n">97.1%</td></tr><tr><td>Marble</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Gallon jug</td><td class="n">93/105</td><td class="n">88.6%</td></tr><tr><td>Plastic cup</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Paper sheet</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>T-shirt</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Pressure gauge</td><td class="n">96/105</td><td class="n">91.4%</td></tr><tr><td>Cable</td><td class="n">101/105</td><td class="n">96.2%</td></tr></tbody></table></div>
+  <div class="tablewrap"><table><caption>Per-object success rates across the combined planar- and orientation-offset protocols. Each object was evaluated in 105 trials.</caption><thead><tr><th scope="col">Object</th><th scope="col">Successful trials</th><th scope="col">Success rate</th></tr></thead><tbody><tr><td>Pen</td><td class="n">102/105</td><td class="n">97.1%</td></tr><tr><td>Marble</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Gallon jug</td><td class="n">93/105</td><td class="n">88.6%</td></tr><tr><td>Plastic cup</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Paper sheet</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>T-shirt</td><td class="n">105/105</td><td class="n">100.0%</td></tr><tr><td>Pressure gauge</td><td class="n">96/105</td><td class="n">91.4%</td></tr><tr><td>Cable</td><td class="n">101/105</td><td class="n">96.2%</td></tr></tbody></table></div>
   <figure class="fig"><div class="ph auto"><img src="static/figures/objects.jpg" alt="The eight test objects laid out on a wooden table: pen, marble, gallon jug, plastic cup, paper sheet, T-shirt, pressure gauge and cable" width="1400" height="1050" loading="lazy" decoding="async"></div><figcaption>Test objects used for evaluation: pen, marble, gallon jug, plastic cup, paper sheet, T-shirt, pressure gauge, and cable.</figcaption></figure>
   <figure class="fig"><div class="ph auto"><img src="static/figures/all_grasp.jpg" alt="Eight photos of the gripper holding each test object in the air, in two rows of four" width="1400" height="923" loading="lazy" decoding="async"></div><figcaption>Successful grasps with the roller-jamming gripper on the eight test objects used in evaluation. Top row (left to right): pen, marble, gallon jug, plastic cup. Bottom row (left to right): paper sheet, T-shirt, pressure gauge, cable.</figcaption></figure>
   <figure class="fig"><div class="ph auto"><img src="static/figures/offset.jpg" alt="Eight panels, one per object, each showing a 3 by 3 grid of planar offsets with markers coloured by successes out of three; nearly all markers show three of three" width="2200" height="1023" loading="lazy" decoding="async"></div><figcaption>Planar-offset test results for the eight objects, with three trials per condition. Each coloured marker corresponds to one offset condition repeated three times; the marker colour indicates the number of successful trials out of three. Offsets are applied on a 3&nbsp;×&nbsp;3 grid about the estimated object centre and scaled to ±20% of the corresponding in-plane object extents.</figcaption></figure>
@@ -195,13 +196,12 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
   <div class="prose"><p>Planar-offset trials on the pen, gallon jug and cable (81 trials per condition) show that rolling and jamming contribute differently.</p></div>
   <div class="tablewrap">
     <table>
-      <caption class="sr" style="position:absolute;left:-9999px">Ablation results</caption>
-      <thead><tr><th>Condition</th><th>Successes</th></tr></thead>
+      <caption>Planar-offset ablation on the pen, gallon jug and cable (three objects × nine offsets × three repetitions = 81 trials per condition).</caption>
+      <thead><tr><th scope="col">Condition</th><th scope="col">Successes</th></tr></thead>
       <tbody>
         <tr><td>Hybrid (full sequence)</td><td class="n">80/81</td></tr>
         <tr><td>Roller only (jamming off)</td><td class="n">54/81</td></tr>
         <tr><td>Jamming only (roller off)</td><td class="n">24/81</td></tr>
-        
       </tbody>
     </table>
   </div>
@@ -227,8 +227,8 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 <div class="wrap">
   <h2>Citation</h2>
   <div class="bib">
-    <button class="copy" type="button" id="copy">Copy</button>
-<pre id="bibtex">@article{ren2026hybrid,
+    <button class="copy" type="button" id="copy" aria-live="polite">Copy</button>
+<pre id="bibtex-entry">@article{ren2026hybrid,
   title   = {Hybrid Roller-Jamming Gripper for Object Acquisition and Retention Under Pose Uncertainty},
   author  = {Ren, Yijie and Gourmelen, Guillaume and Iwata, Hiroyasu},
   journal = {IEEE Access},
@@ -246,11 +246,11 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
 
 <script>
 document.getElementById('copy').addEventListener('click', function () {
-  var b = this, t = document.getElementById('bibtex').innerText;
+  var b = this, t = document.getElementById('bibtex-entry').innerText;
   (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
     b.textContent = 'Copied';
   }, function () {
-    var r = document.createRange(); r.selectNodeContents(document.getElementById('bibtex'));
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('bibtex-entry'));
     var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press copy';
   });
   setTimeout(function () { b.textContent = 'Copy'; }, 2000);
