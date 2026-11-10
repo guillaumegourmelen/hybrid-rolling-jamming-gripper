@@ -62,7 +62,9 @@ section.part+section.part,section.cite{border-top:1px solid var(--line)}
 .part-lead{color:var(--steel);max-width:62ch;margin:.75rem 0 0;font-size:1.1rem}
 section.sub{padding-top:2.75rem}
 section.sub>h3{font-size:1.55rem;margin-bottom:.9rem}
-h4.fab{margin:2rem 0 0}
+section.feature{margin-top:2.75rem;padding:2rem;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--cobalt);border-radius:10px}
+section.feature>h3{font-size:clamp(1.9rem,3.6vw,2.4rem)}
+section.feature figure.fig:first-of-type{margin-top:1rem}
 h4{font-family:Newsreader,Georgia,serif;font-weight:600;font-size:1.25rem;line-height:1.2;margin:0 0 .4rem}
 section.cite{padding:3rem 0}
 section.cite h2{font-size:1.9rem;margin-bottom:1.1rem}
@@ -102,7 +104,7 @@ caption{caption-side:top;text-align:left;color:var(--steel);font-size:.92rem;pad
 pre{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:1.1rem;overflow-x:auto;font:.88rem/1.55 ui-monospace,Menlo,Consolas,monospace}
 .copy{position:absolute;top:.6rem;right:.6rem;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.3rem .7rem;font:600 .85rem "Public Sans",sans-serif;cursor:pointer}
 footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);font-size:.92rem}
-@media (max-width:480px){th,td{padding:.55rem .6rem}.toc a{padding:.85rem .5rem;font-size:.9rem}.toc a b{display:none}}
+@media (max-width:480px){th,td{padding:.55rem .6rem}.toc a{padding:.85rem .5rem;font-size:.9rem}section.feature{padding:1.25rem}.toc a b{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
@@ -125,6 +127,7 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
     <li><a class="btn" href="https://arxiv.org/abs/2608.20962">arXiv</a></li>
     <li><a class="btn" href="https://doi.org/10.1109/ACCESS.2026.3738462">DOI</a></li>
     <li><a class="btn" href="#video">Video</a></li>
+    <li><a class="btn" href="#fabrication">Fabrication video</a></li>
     <!-- TODO(repo-links): turn these two into <a class="btn" href="..."> once the code and 3D-model repositories are public -->
     <li><span class="btn soon" title="Coming soon">Code (coming soon)</span></li>
     <li><span class="btn soon" title="Coming soon">3D models (coming soon)</span></li>
@@ -315,9 +318,13 @@ footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--steel);f
     <p>Each membrane is cast as a single spherical shell from Dragon Skin 30 silicone (nominal thickness 1&nbsp;mm, outer diameter about 80&nbsp;mm) in a 3D-printed two-part mould with an internal core. Dimples on the outer surface (3&nbsp;mm diameter, 0.6&nbsp;mm high) are intended to improve membrane flexibility.</p>
     <p>The membrane is filled mainly with ground coffee plus about 50 polypropylene balls of 3&nbsp;mm and 5.5&nbsp;mm diameter, which reduces clumping and preserves airflow during evacuation. ABS clamp rings seal both ends; one end drives the roller and the other connects to a rotary union, so vacuum can be applied while the roller turns. Because the membrane is clamped rather than bonded, membrane and fill can be replaced in about 10 minutes. No membrane failures were observed during about 1000 grasp trials with the same membrane set.</p>
   </div>
-  <figure class="fig"><div class="ph auto"><img src="static/figures/mould.jpg" alt="CAD renderings of the membrane mould: the green core shell with alignment shaft and clamping bands, and the opened grey two-part cavity with a dimpled spherical surface" width="1800" height="488" loading="lazy" decoding="async"></div><figcaption>Membrane mould components: (Left) internal core and alignment shaft and (Right) assembled two-part mould containing the core shell and outer cavity used to form the spherical dimpled membrane.</figcaption></figure>
-  <h4 class="fab">Fabrication process</h4>
+  </section>
+
+  <section class="sub feature" id="fabrication">
+  <h3>Fabrication process</h3>
+  <div class="prose"><p>The membrane is cast in a 3D-printed two-part mould with an internal core. The video shows the whole process, from pouring the silicone to trimming the cured membrane.</p></div>
   <figure class="fig"><div class="video"><video controls muted playsinline preload="none" poster="static/videos/membrane-fabrication.jpg" width="854" height="480" aria-label="Membrane fabrication video"><source src="static/videos/membrane-fabrication.mp4" type="video/mp4">Your browser cannot play this video. <a href="static/videos/membrane-fabrication.mp4">Download it (MP4)</a>.</video></div><figcaption>Membrane fabrication (no sound): pouring silicone into the 3D-printed mould, degassing in a vacuum chamber, closing the mould, then demoulding and trimming the cured membrane.</figcaption></figure>
+  <figure class="fig"><div class="ph auto"><img src="static/figures/mould.jpg" alt="CAD renderings of the membrane mould: the green core shell with alignment shaft and clamping bands, and the opened grey two-part cavity with a dimpled spherical surface" width="1800" height="488" loading="lazy" decoding="async"></div><figcaption>Membrane mould components: (Left) internal core and alignment shaft and (Right) assembled two-part mould containing the core shell and outer cavity used to form the spherical dimpled membrane.</figcaption></figure>
   </section>
 
   <section class="sub" id="electronics">
